@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="jogo.js"></script>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+	<div class="painel">
+		<div class="vidas">
+			<img id="v1" src="coracao_cheio.png">
+			<img id="v2" src="coracao_cheio.png">
+			<img id="v3" src="coracao_cheio.png">
+		</div>
+		<br>
+		<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+	</div>
+
+	<script>
+		//copíado do JS
+		document.getElementById('cronometro').innerHTML = tempo
+	
+
+		// posicaoRandomica() comentei, pq era o primeiro passo, agora vai pro setInterval
+
+		//setInterval é uma ação seguida de um tempo (que poderia ser o numero, mas como foi feito outras
+		//dificuldades, entao foi usado a variavel criaMosquitoTempo)
+		var criaMosquito = setInterval(function(){posicaoRandomica()}, criaMosquitoTempo)
+	</script>
+
+</body>
+</html>
